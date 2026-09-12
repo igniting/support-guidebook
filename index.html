@@ -1,17 +1,17 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="An illustrated, sourced guidebook to technical support engineering: diagnosis, cases, incidents, team design, knowledge, staffing, and AI."><title>The Support Engineer’s Field Guide</title><style>:root{--paper:#fbfaf7;--ink:#23332e;--muted:#617068;--line:#d9ded6;--accent:#1c604e;--soft:#eef0e8;--serif:Georgia,'Times New Roman',serif;--sans:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="An illustrated, sourced guidebook to technical support engineering: diagnosis, cases, incidents, team design, knowledge, staffing, and AI."><link rel="canonical" href="https://igniting.github.io/support-guidebook/"><meta property="og:type" content="article"><meta property="og:title" content="The Support Engineer’s Field Guide"><meta property="og:description" content="An illustrated, sourced guidebook to technical support engineering: diagnosis, cases, incidents, team design, knowledge, staffing, and AI."><meta property="og:url" content="https://igniting.github.io/support-guidebook/"><meta name="twitter:card" content="summary"><meta name="color-scheme" content="light"><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231c604e'/%3E%3Cpath d='M32 15c-4.5-3.2-9.8-4-15-4v36c5.2 0 10.5.8 15 4 4.5-3.2 9.8-4 15-4V11c-5.2 0-10.5.8-15 4z' fill='none' stroke='%23fbfaf7' stroke-width='4' stroke-linejoin='round'/%3E%3Cpath d='M32 15v36' stroke='%23fbfaf7' stroke-width='4'/%3E%3C/svg%3E"><title>The Support Engineer’s Field Guide</title><style>:root{--paper:#fbfaf7;--ink:#23332e;--muted:#617068;--line:#d9ded6;--accent:#1c604e;--soft:#eef0e8;--serif:Georgia,'Times New Roman',serif;--sans:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}
 *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:38px}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);font-size:19px;line-height:1.75;-webkit-font-smoothing:antialiased}a{color:var(--accent);text-underline-offset:3px;text-decoration-thickness:1px}a:hover{color:#0b3b2c}button,input,summary{font-family:var(--sans)}button,a,summary,input{outline-offset:4px}button:focus-visible,a:focus-visible,summary:focus-visible,input:focus-visible{outline:2px solid #a75f2d}button{cursor:pointer}p{margin:0 0 1.2em}strong{font-weight:700}em{font-style:italic}h1,h2,h3,h4{font-weight:500;line-height:1.2;text-wrap:balance}h1{font-size:clamp(48px,5.7vw,73px);letter-spacing:-2.6px;margin:0 0 30px;line-height:1.06}h2{font-size:43px;letter-spacing:-1.1px;margin:0}h3{font-size:27px;letter-spacing:-.35px;margin:2.1em 0 .9em}h4{font-size:24px;margin:8px 0 24px}ul,ol{padding-left:1.45em;margin:1em 0 1.4em}li{padding-left:.2em;margin:.45em 0}li>p{margin-bottom:.5em}
-.book-layout{display:grid;grid-template-columns:236px minmax(0,820px);gap:78px;max-width:1246px;padding:0 56px;margin:0 auto}.sidebar{position:sticky;top:0;height:100vh;padding:45px 0 24px;overflow-y:auto;scrollbar-width:thin;font-family:var(--sans)}.book-mark{display:block;color:var(--ink);font-size:17px;line-height:1.35;font-weight:700;text-decoration:none;letter-spacing:.3px;margin-bottom:32px}.book-mark span{display:block;font-size:10px;letter-spacing:1.5px;color:var(--muted);font-weight:500;margin-top:14px}.toc-prologue{font-size:12px;display:block;text-decoration:none;margin:0 0 19px;color:var(--muted)}.toc-group{margin:0 0 17px}.toc-group>p{font-size:10px;line-height:1.4;font-weight:700;letter-spacing:.65px;text-transform:uppercase;color:var(--muted);margin:0 0 6px}.toc-group ol{list-style:none;padding:0;margin:0}.toc-group li{margin:0;padding:0}.toc-group a{font-size:12px;line-height:1.45;display:flex;gap:9px;padding:4px 6px 4px 0;text-decoration:none;color:#46584f;border-right:2px solid transparent}.toc-group a span{font-variant-numeric:tabular-nums;color:#88918a;font-size:10px;padding-top:2px;min-width:16px}.toc-group a.active{color:var(--accent);font-weight:700;border-right-color:var(--accent)}.sidebar-note{font-size:10px;line-height:1.65;color:var(--muted);margin-top:28px}main{min-width:0;padding-bottom:80px}.cover{padding:94px 0 57px;border-bottom:1px solid var(--line);margin-bottom:48px}.eyebrow,.chapter-number{font:600 11px/1.5 var(--sans);letter-spacing:1.6px;color:var(--accent);margin:0 0 23px}.dek{font-size:27px;line-height:1.4;color:#587065;margin-bottom:34px}.edition{display:flex;flex-wrap:wrap;gap:0;font:12px/1.8 var(--sans);color:var(--muted);margin-bottom:24px}.edition span+span:before{content:'·';padding:0 12px}.cover-note{font-size:16px;max-width:530px;line-height:1.65;color:var(--muted);margin-bottom:0}.prologue{margin-bottom:92px}.prologue>p:first-child{font-size:23px;line-height:1.6}.chapter{padding-top:28px;margin-bottom:88px;scroll-margin-top:25px}.chapter-header{border-top:2px solid var(--ink);padding-top:28px;margin:0 0 35px}.chapter-number{font-size:10px;margin-bottom:16px}.chapter p{orphans:3;widows:3}.table-scroll{overflow:auto;max-width:100%;margin:30px 0 35px;border-top:1px solid #a6b4a9;border-bottom:1px solid var(--line);scrollbar-width:thin}table{border-collapse:collapse;width:100%;min-width:570px;font:14px/1.65 var(--sans)}th{text-align:left;color:#33493e;font-size:12px;font-weight:650;line-height:1.55;padding:15px 13px 14px 0;vertical-align:bottom;background:#f1f2eb}th:first-child,td:first-child{padding-left:12px}td{vertical-align:top;padding:14px 13px 15px 0;border-top:1px solid var(--line)}tr:nth-child(even) td{background:#f6f6f0}td a{overflow-wrap:anywhere}td strong{font-weight:650}.source-figure{margin:43px 0 39px;padding:0}.zoom-image{display:block;position:relative;border:0;padding:0;margin:0 auto 18px;background:transparent;max-width:var(--image-max);width:100%;line-height:0}.zoom-image img{width:100%;height:auto;display:block}.zoom-label{display:block;position:absolute;right:8px;bottom:8px;color:white;background:rgba(22,45,35,.86);padding:7px 10px;border-radius:3px;font:10px/1.4 var(--sans);opacity:0;transition:opacity .15s}.zoom-image:hover .zoom-label,.zoom-image:focus-visible .zoom-label{opacity:1}figcaption{font:12.5px/1.7 var(--sans);color:var(--muted);padding:0 0 0 15px;border-left:2px solid #a8b4a8}figcaption strong{display:block;font-size:14px;color:var(--ink);font-weight:600;margin:3px 0}.figure-number{font-size:9px;letter-spacing:1.4px;color:var(--accent)}.code-wrap{position:relative;margin:28px 0 31px;background:#eef0e9;border:1px solid #dde2d9;border-radius:4px}pre{margin:0;padding:42px 20px 20px;overflow:auto;font:12.5px/1.75 ui-monospace,SFMono-Regular,Consolas,monospace;tab-size:2}code{font: .83em ui-monospace,SFMono-Regular,Consolas,monospace;background:#ecefe6;padding:2px 4px;border-radius:2px;overflow-wrap:anywhere}pre code{font:inherit;background:transparent;padding:0;overflow-wrap:normal}.copy-code{position:absolute;top:9px;right:10px;border:1px solid #c7d1c6;color:#47614f;background:var(--paper);padding:4px 10px;border-radius:3px;font-size:10px}.exercise{margin:26px 0 33px;padding:0 22px;border:1px solid #c9d4c5;background:#f2f4ec;border-radius:3px}.exercise summary{cursor:pointer;font-size:14px;line-height:1.65;font-weight:600;color:var(--accent);padding:18px 0}.exercise[open] summary{margin-bottom:8px;border-bottom:1px solid #d3dece;padding-bottom:15px}.exercise p{font-size:17px;line-height:1.75}.exercise p:last-child{margin-bottom:24px}.calculator{padding:27px 26px;background:#edf1e8;border:1px solid #d3dece;border-radius:4px;margin:35px 0;font-family:var(--sans)}.calculator .eyebrow{font-size:9px;letter-spacing:1.3px;margin-bottom:9px}.calculator h4{font-family:var(--serif);font-size:27px}.input-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px 20px}.input-grid label{font-size:11px;line-height:1.5;color:#4f6658;display:flex;flex-direction:column;justify-content:flex-end}.input-grid input{width:100%;font-size:18px;line-height:1.4;padding:9px 10px;margin-top:6px;background:#fbfcf8;color:#203c2a;border:1px solid #b9c8b5;border-radius:3px;font-variant-numeric:tabular-nums}.reset{margin-top:17px;font-size:11px;border:0;border-bottom:1px solid #8b9e83;background:none;color:#435d3d;padding:3px 0}.calc-result{border-top:1px solid #b6c7ae;margin:25px 0 16px;padding-top:19px;font:14px/1.75 var(--sans);font-variant-numeric:tabular-nums}.calc-result p{margin-bottom:7px}.calc-result strong{font-size:17px;font-weight:650;color:#214c36}.calculator .formula{font:11px/1.65 var(--sans);color:#667561;margin:0}.book-footer{padding-top:25px;border-top:1px solid var(--line);font:12px/1.8 var(--sans);color:var(--muted);margin-top:30px}.book-footer p{margin-bottom:6px}.reading-progress{position:fixed;left:0;right:0;top:0;height:3px;z-index:40;pointer-events:none}.reading-progress span{display:block;width:0;height:100%;background:var(--accent)}.skip-link{position:absolute;top:-100px;left:10px;background:white;padding:8px 14px;z-index:100;font:14px var(--sans)}.skip-link:focus{top:10px}.mobile-bar{display:none}#image-dialog{max-width:96vw;max-height:94vh;border:0;padding:44px 18px 18px;background:var(--paper);color:var(--ink);border-radius:5px}#image-dialog::backdrop{background:rgba(10,22,16,.8)}#image-dialog form{position:absolute;right:15px;top:10px}#image-dialog button{font:12px var(--sans);background:var(--paper);color:var(--ink);border:1px solid #b8c6b7;border-radius:3px;padding:6px 12px}#image-dialog img{display:block;max-width:90vw;max-height:76vh;object-fit:contain;margin:auto}#image-dialog p{font:12px/1.5 var(--sans);margin:14px 0 0;max-width:900px}
+.book-layout{display:grid;grid-template-columns:236px minmax(0,820px);gap:78px;max-width:1246px;padding:0 56px;margin:0 auto}.sidebar{position:sticky;top:0;height:100vh;padding:45px 0 24px;overflow-y:auto;scrollbar-width:thin;font-family:var(--sans)}.book-mark{display:block;color:var(--ink);font-size:17px;line-height:1.35;font-weight:700;text-decoration:none;letter-spacing:.3px;margin-bottom:32px}.book-mark span{display:block;font-size:10px;letter-spacing:1.5px;color:var(--muted);font-weight:500;margin-top:14px}.toc-prologue{font-size:12px;display:block;text-decoration:none;margin:0 0 19px;color:var(--muted)}.toc-group{margin:0 0 17px}.toc-group>p{font-size:10px;line-height:1.4;font-weight:700;letter-spacing:.65px;text-transform:uppercase;color:var(--muted);margin:0 0 6px}.toc-group ol{list-style:none;padding:0;margin:0}.toc-group li{margin:0;padding:0}.toc-group a{font-size:12px;line-height:1.45;display:flex;gap:9px;padding:4px 6px 4px 0;text-decoration:none;color:#46584f;border-right:2px solid transparent}.toc-group a span{font-variant-numeric:tabular-nums;color:#6a746c;font-size:10px;padding-top:2px;min-width:16px}.toc-group a.active{color:var(--accent);font-weight:700;border-right-color:var(--accent)}.sidebar-note{font-size:10px;line-height:1.65;color:var(--muted);margin-top:28px}main{min-width:0;padding-bottom:80px}.cover{padding:94px 0 57px;border-bottom:1px solid var(--line);margin-bottom:48px}.eyebrow,.chapter-number{font:600 11px/1.5 var(--sans);letter-spacing:1.6px;color:var(--accent);margin:0 0 23px}.dek{font-size:27px;line-height:1.4;color:#587065;margin-bottom:34px}.edition{display:flex;flex-wrap:wrap;gap:0;font:12px/1.8 var(--sans);color:var(--muted);margin-bottom:24px}.edition span+span:before{content:'·';padding:0 12px}.cover-note{font-size:16px;max-width:530px;line-height:1.65;color:var(--muted);margin-bottom:0}.prologue{margin-bottom:92px}.prologue>p:first-child{font-size:23px;line-height:1.6}.chapter{padding-top:28px;margin-bottom:88px;scroll-margin-top:25px}.chapter-header{border-top:2px solid var(--ink);padding-top:28px;margin:0 0 35px}.chapter-number{font-size:10px;margin-bottom:16px}.chapter p{orphans:3;widows:3}.table-scroll{overflow:auto;max-width:100%;margin:30px 0 35px;border-top:1px solid #a6b4a9;border-bottom:1px solid var(--line);scrollbar-width:thin}table{border-collapse:collapse;width:100%;min-width:570px;font:14px/1.65 var(--sans)}th{text-align:left;color:#33493e;font-size:12px;font-weight:650;line-height:1.55;padding:15px 13px 14px 0;vertical-align:bottom;background:#f1f2eb}th:first-child,td:first-child{padding-left:12px}td{vertical-align:top;padding:14px 13px 15px 0;border-top:1px solid var(--line)}tr:nth-child(even) td{background:#f6f6f0}td a{overflow-wrap:anywhere}th.num,td.num{text-align:right}td strong{font-weight:650}.source-figure{margin:43px 0 39px;padding:0}.zoom-image{display:block;position:relative;border:0;padding:0;margin:0 auto 18px;background:transparent;max-width:var(--image-max);width:100%;line-height:0}.zoom-image img{width:100%;height:auto;display:block}.zoom-label{display:block;position:absolute;right:8px;bottom:8px;color:white;background:rgba(22,45,35,.86);padding:7px 10px;border-radius:3px;font:10px/1.4 var(--sans);opacity:0;transition:opacity .15s}.zoom-image:hover .zoom-label,.zoom-image:focus-visible .zoom-label{opacity:1}figcaption{font:12.5px/1.7 var(--sans);color:var(--muted);padding:0 0 0 15px;border-left:2px solid #a8b4a8}figcaption strong{display:block;font-size:14px;color:var(--ink);font-weight:600;margin:3px 0}.figure-number{font-size:9px;letter-spacing:1.4px;color:var(--accent)}.code-wrap{position:relative;margin:28px 0 31px;background:#eef0e9;border:1px solid #dde2d9;border-radius:4px}pre{margin:0;padding:42px 20px 20px;overflow:auto;font:12.5px/1.75 ui-monospace,SFMono-Regular,Consolas,monospace;tab-size:2}code{font: .83em ui-monospace,SFMono-Regular,Consolas,monospace;background:#ecefe6;padding:2px 4px;border-radius:2px;overflow-wrap:anywhere}pre code{font:inherit;background:transparent;padding:0;overflow-wrap:normal}.copy-code{position:absolute;top:9px;right:10px;border:1px solid #c7d1c6;color:#47614f;background:var(--paper);padding:4px 10px;border-radius:3px;font-size:10px}.exercise{margin:26px 0 33px;padding:0 22px;border:1px solid #c9d4c5;background:#f2f4ec;border-radius:3px}.exercise summary{cursor:pointer;font-size:14px;line-height:1.65;font-weight:600;color:var(--accent);padding:18px 0}.exercise[open] summary{margin-bottom:8px;border-bottom:1px solid #d3dece;padding-bottom:15px}.exercise p{font-size:17px;line-height:1.75}.exercise p:last-child{margin-bottom:24px}.calculator{padding:27px 26px;background:#edf1e8;border:1px solid #d3dece;border-radius:4px;margin:35px 0;font-family:var(--sans)}.calculator .eyebrow{font-size:9px;letter-spacing:1.3px;margin-bottom:9px}.calculator h4{font-family:var(--serif);font-size:27px}.input-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px 20px}.input-grid label{font-size:11px;line-height:1.5;color:#4f6658;display:flex;flex-direction:column;justify-content:flex-end}.input-grid input{width:100%;font-size:18px;line-height:1.4;padding:9px 10px;margin-top:6px;background:#fbfcf8;color:#203c2a;border:1px solid #b9c8b5;border-radius:3px;font-variant-numeric:tabular-nums}.reset{margin-top:17px;font-size:11px;border:0;border-bottom:1px solid #8b9e83;background:none;color:#435d3d;padding:3px 0}.calc-result{border-top:1px solid #b6c7ae;margin:25px 0 16px;padding-top:19px;font:14px/1.75 var(--sans);font-variant-numeric:tabular-nums}.calc-result p{margin-bottom:7px}.calc-result strong{font-size:17px;font-weight:650;color:#214c36}.calculator .formula{font:11px/1.65 var(--sans);color:#617058;margin:0}.book-footer{padding-top:25px;border-top:1px solid var(--line);font:12px/1.8 var(--sans);color:var(--muted);margin-top:30px}.book-footer p{margin-bottom:6px}.reading-progress{position:fixed;left:0;right:0;top:0;height:3px;z-index:40;pointer-events:none}.reading-progress span{display:block;width:0;height:100%;background:var(--accent)}.skip-link{position:absolute;top:-100px;left:10px;background:white;padding:8px 14px;z-index:100;font:14px var(--sans)}.skip-link:focus{top:10px}.mobile-bar{display:none}#image-dialog{max-width:96vw;max-height:94vh;border:0;padding:44px 18px 18px;background:var(--paper);color:var(--ink);border-radius:5px}#image-dialog::backdrop{background:rgba(10,22,16,.8)}#image-dialog form{position:absolute;right:15px;top:10px}#image-dialog button{font:12px var(--sans);background:var(--paper);color:var(--ink);border:1px solid #b8c6b7;border-radius:3px;padding:6px 12px}#image-dialog img{display:block;max-width:90vw;max-height:76vh;object-fit:contain;margin:auto}#image-dialog p{font:12px/1.5 var(--sans);margin:14px 0 0;max-width:900px}
 @media(min-width:1350px){.book-layout{gap:90px;max-width:1310px}.sidebar{padding-top:54px}.cover{padding-top:104px}}
-@media(max-width:1100px){.book-layout{display:block;max-width:890px;padding:0 38px}.sidebar{display:none}.mobile-bar{display:flex;position:sticky;top:0;z-index:20;align-items:flex-start;justify-content:space-between;background:rgba(251,250,247,.97);padding:13px 28px;border-bottom:1px solid var(--line);font:12px/1.5 var(--sans)}.mobile-bar>a{text-decoration:none;color:var(--ink);font-weight:600}.mobile-contents>summary{cursor:pointer;color:var(--accent);font-size:12px}.mobile-contents[open] nav{position:absolute;right:20px;top:45px;width:min(350px,calc(100vw - 40px));background:var(--paper);border:1px solid var(--line);padding:23px;box-shadow:0 15px 30px #1e302d22;max-height:78vh;overflow:auto}.cover{padding-top:58px}.chapter{scroll-margin-top:74px}html{scroll-padding-top:75px}.toc-group a{font-size:13px;padding:5px 0}}
+@media(max-width:1100px){.book-layout{display:block;max-width:890px;padding:0 38px}.sidebar{display:none}.mobile-bar{display:flex;position:sticky;top:0;z-index:20;align-items:flex-start;justify-content:space-between;background:rgba(251,250,247,.97);padding:13px 28px;border-bottom:1px solid var(--line);font:12px/1.5 var(--sans)}.mobile-bar>a{text-decoration:none;color:var(--ink);font-weight:600}.mobile-contents>summary{cursor:pointer;color:var(--accent);font-size:12px}.mobile-contents[open] nav{position:absolute;right:20px;top:45px;width:min(350px,calc(100vw - 40px));background:var(--paper);border:1px solid var(--line);padding:23px;box-shadow:0 15px 30px #1e302d22;max-height:78vh;overflow:auto}.cover{padding-top:58px}.chapter{scroll-margin-top:0}html{scroll-padding-top:75px}.toc-group a{font-size:13px;padding:5px 0}}
 @media(max-width:600px){body{font-size:17px;line-height:1.75}.book-layout{padding:0 23px}.mobile-bar{padding:12px 23px}h1{font-size:45px;letter-spacing:-1.65px;line-height:1.07;margin-bottom:23px}.desktop-break{display:none}.cover{padding:44px 0 35px;margin-bottom:31px}.eyebrow{font-size:9px;letter-spacing:1.3px;margin-bottom:20px}.dek{font-size:22px;line-height:1.4;margin-bottom:26px}.cover-note{font-size:14px}.edition{font-size:10px;margin-bottom:20px}.edition span+span:before{padding:0 8px}.prologue>p:first-child{font-size:20px}.prologue{margin-bottom:55px}.chapter{margin-bottom:60px;padding-top:13px}.chapter-header{padding-top:21px;margin-bottom:27px}.chapter-number{font-size:9px;margin-bottom:12px}h2{font-size:33px;letter-spacing:-.6px}h3{font-size:24px;margin-top:1.75em}.source-figure{margin:31px 0}.zoom-label{opacity:1;font-size:9px}figcaption{font-size:11px;padding-left:11px}figcaption strong{font-size:12px}.table-scroll{margin:24px 0}table{font-size:12px;line-height:1.6;min-width:570px}th{font-size:11px}td{padding-top:12px;padding-bottom:12px}.exercise{padding:0 16px}.exercise summary{font-size:13px}.exercise p{font-size:16px}.calculator{padding:21px 16px}.calculator h4{font-size:25px}.input-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.input-grid label{font-size:10px}.input-grid input{font-size:17px}.calc-result{font-size:12px}.calc-result strong{font-size:15px}.formula{font-size:10px}pre{font-size:11px;padding-left:13px;padding-right:13px}.code-wrap{margin:24px 0}#image-dialog{padding-left:8px;padding-right:8px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
 @media print{body{background:white;font-size:11pt;line-height:1.5}.sidebar,.mobile-bar,.reading-progress,.copy-code,.zoom-label,.reset,#image-dialog,.skip-link{display:none!important}.book-layout{display:block;max-width:none;padding:0}.cover{padding:0 0 25px}h1{font-size:40pt}h2{font-size:26pt}.chapter{break-before:page;margin-bottom:30px}.chapter-header{margin-bottom:20px}.source-figure,.code-wrap{break-inside:avoid}.table-scroll{overflow:visible}table{min-width:0;font-size:9pt}.calculator{break-inside:avoid}a{color:inherit}.exercise{background:white}.book-footer{font-size:9pt}}
-</style></head><body><a class="skip-link" href="#main">Skip to guide</a><div class="reading-progress" aria-hidden="true"><span></span></div><div class="mobile-bar"><a href="#prologue">Support engineering</a><details class="mobile-contents"><summary>Contents</summary><nav aria-label="Mobile contents"><a class="toc-prologue" href="#prologue">About this guide</a><div class="toc-group"><p>Foundations</p><ol><li><a href="#chapter-1"><span>01</span>The work behind a case</a></li></ol></div><div class="toc-group"><p>The individual craft</p><ol><li><a href="#chapter-2"><span>02</span>Make it investigable</a></li><li><a href="#chapter-3"><span>03</span>Diagnosis</a></li><li><a href="#chapter-4"><span>04</span>Technical toolkit</a></li><li><a href="#chapter-5"><span>05</span>Three case labs</a></li><li><a href="#chapter-6"><span>06</span>Customer communication</a></li></ol></div><div class="toc-group"><p>Working across teams</p><ol><li><a href="#chapter-7"><span>07</span>Engineering escalations</a></li><li><a href="#chapter-8"><span>08</span>Shared incidents</a></li><li><a href="#chapter-9"><span>09</span>Routing & team models</a></li><li><a href="#chapter-10"><span>10</span>Knowledge</a></li></ol></div><div class="toc-group"><p>Running the service</p><ol><li><a href="#chapter-11"><span>11</span>Capacity & promises</a></li><li><a href="#chapter-12"><span>12</span>Metrics & quality</a></li><li><a href="#chapter-13"><span>13</span>Product feedback</a></li><li><a href="#chapter-14"><span>14</span>Support tooling</a></li></ol></div><div class="toc-group"><p>Automation & development</p><ol><li><a href="#chapter-15"><span>15</span>AI & automation</a></li><li><a href="#chapter-16"><span>16</span>Careers & learning</a></li></ol></div><div class="toc-group"><p>References & templates</p><ol><li><a href="#chapter-17"><span>17</span>Evidence & reading</a></li><li><a href="#chapter-18"><span>18</span>Working templates</a></li></ol></div></nav></details></div><div class="book-layout"><aside class="sidebar"><a class="book-mark" href="#prologue">THE SUPPORT<br>ENGINEER’S<br>FIELD GUIDE<span>RESEARCH & PRACTICE</span></a><nav aria-label="Guide contents"><a class="toc-prologue" href="#prologue">About this guide</a><div class="toc-group"><p>Foundations</p><ol><li><a href="#chapter-1"><span>01</span>The work behind a case</a></li></ol></div><div class="toc-group"><p>The individual craft</p><ol><li><a href="#chapter-2"><span>02</span>Make it investigable</a></li><li><a href="#chapter-3"><span>03</span>Diagnosis</a></li><li><a href="#chapter-4"><span>04</span>Technical toolkit</a></li><li><a href="#chapter-5"><span>05</span>Three case labs</a></li><li><a href="#chapter-6"><span>06</span>Customer communication</a></li></ol></div><div class="toc-group"><p>Working across teams</p><ol><li><a href="#chapter-7"><span>07</span>Engineering escalations</a></li><li><a href="#chapter-8"><span>08</span>Shared incidents</a></li><li><a href="#chapter-9"><span>09</span>Routing & team models</a></li><li><a href="#chapter-10"><span>10</span>Knowledge</a></li></ol></div><div class="toc-group"><p>Running the service</p><ol><li><a href="#chapter-11"><span>11</span>Capacity & promises</a></li><li><a href="#chapter-12"><span>12</span>Metrics & quality</a></li><li><a href="#chapter-13"><span>13</span>Product feedback</a></li><li><a href="#chapter-14"><span>14</span>Support tooling</a></li></ol></div><div class="toc-group"><p>Automation & development</p><ol><li><a href="#chapter-15"><span>15</span>AI & automation</a></li><li><a href="#chapter-16"><span>16</span>Careers & learning</a></li></ol></div><div class="toc-group"><p>References & templates</p><ol><li><a href="#chapter-17"><span>17</span>Evidence & reading</a></li><li><a href="#chapter-18"><span>18</span>Working templates</a></li></ol></div></nav><p class="sidebar-note">Read offline. Follow the sources.<br>Use the templates.</p></aside><main id="main"><header class="cover"><p class="eyebrow">A PRACTITIONER’S GUIDEBOOK</p><h1>The Support Engineer’s<br class="desktop-break"> Field Guide</h1><p class="dek">Investigate difficult cases.<br>Work with engineering.<br>Build a team that learns.</p><div class="edition"><span>September 2026</span><span>18 chapters</span><span>About 89 minutes</span></div><p class="cover-note">Firsthand company accounts, technical case labs, published evidence, and tools for the work behind the queue.</p></header><section class="prologue" id="prologue" aria-label="About this guide">
+</style></head><body><a class="skip-link" href="#main">Skip to guide</a><div class="reading-progress" aria-hidden="true"><span></span></div><div class="mobile-bar"><a href="#prologue">Support engineering</a><details class="mobile-contents"><summary>Contents</summary><nav aria-label="Mobile contents"><a class="toc-prologue" href="#prologue">About this guide</a><div class="toc-group"><p>Foundations</p><ol><li><a href="#chapter-1"><span>01</span>The work behind a case</a></li></ol></div><div class="toc-group"><p>The individual craft</p><ol><li><a href="#chapter-2"><span>02</span>Make it investigable</a></li><li><a href="#chapter-3"><span>03</span>Diagnosis</a></li><li><a href="#chapter-4"><span>04</span>Technical toolkit</a></li><li><a href="#chapter-5"><span>05</span>Three case labs</a></li><li><a href="#chapter-6"><span>06</span>Customer communication</a></li></ol></div><div class="toc-group"><p>Working across teams</p><ol><li><a href="#chapter-7"><span>07</span>Engineering escalations</a></li><li><a href="#chapter-8"><span>08</span>Shared incidents</a></li><li><a href="#chapter-9"><span>09</span>Routing & team models</a></li><li><a href="#chapter-10"><span>10</span>Knowledge</a></li></ol></div><div class="toc-group"><p>Running the service</p><ol><li><a href="#chapter-11"><span>11</span>Capacity & promises</a></li><li><a href="#chapter-12"><span>12</span>Metrics & quality</a></li><li><a href="#chapter-13"><span>13</span>Product feedback</a></li><li><a href="#chapter-14"><span>14</span>Support tooling</a></li></ol></div><div class="toc-group"><p>Automation & development</p><ol><li><a href="#chapter-15"><span>15</span>AI & automation</a></li><li><a href="#chapter-16"><span>16</span>Careers & learning</a></li></ol></div><div class="toc-group"><p>References & templates</p><ol><li><a href="#chapter-17"><span>17</span>Evidence & reading</a></li><li><a href="#chapter-18"><span>18</span>Working templates</a></li></ol></div></nav></details></div><div class="book-layout"><aside class="sidebar"><a class="book-mark" href="#prologue">THE SUPPORT<br>ENGINEER’S<br>FIELD GUIDE<span>RESEARCH & PRACTICE</span></a><nav aria-label="Guide contents"><a class="toc-prologue" href="#prologue">About this guide</a><div class="toc-group"><p>Foundations</p><ol><li><a href="#chapter-1"><span>01</span>The work behind a case</a></li></ol></div><div class="toc-group"><p>The individual craft</p><ol><li><a href="#chapter-2"><span>02</span>Make it investigable</a></li><li><a href="#chapter-3"><span>03</span>Diagnosis</a></li><li><a href="#chapter-4"><span>04</span>Technical toolkit</a></li><li><a href="#chapter-5"><span>05</span>Three case labs</a></li><li><a href="#chapter-6"><span>06</span>Customer communication</a></li></ol></div><div class="toc-group"><p>Working across teams</p><ol><li><a href="#chapter-7"><span>07</span>Engineering escalations</a></li><li><a href="#chapter-8"><span>08</span>Shared incidents</a></li><li><a href="#chapter-9"><span>09</span>Routing & team models</a></li><li><a href="#chapter-10"><span>10</span>Knowledge</a></li></ol></div><div class="toc-group"><p>Running the service</p><ol><li><a href="#chapter-11"><span>11</span>Capacity & promises</a></li><li><a href="#chapter-12"><span>12</span>Metrics & quality</a></li><li><a href="#chapter-13"><span>13</span>Product feedback</a></li><li><a href="#chapter-14"><span>14</span>Support tooling</a></li></ol></div><div class="toc-group"><p>Automation & development</p><ol><li><a href="#chapter-15"><span>15</span>AI & automation</a></li><li><a href="#chapter-16"><span>16</span>Careers & learning</a></li></ol></div><div class="toc-group"><p>References & templates</p><ol><li><a href="#chapter-17"><span>17</span>Evidence & reading</a></li><li><a href="#chapter-18"><span>18</span>Working templates</a></li></ol></div></nav><p class="sidebar-note">Read offline. Follow the sources.<br>Use the templates.</p></aside><main id="main"><header class="cover"><p class="eyebrow">A PRACTITIONER’S GUIDEBOOK</p><h1>The Support Engineer’s<br class="desktop-break"> Field Guide</h1><p class="dek">Investigate difficult cases.<br>Work with engineering.<br>Build a team that learns.</p><div class="edition"><span>September 2026</span><span>18 chapters</span><span>About 95 minutes</span></div><p class="cover-note">Firsthand company accounts, technical case labs, published evidence, and tools for the work behind the queue.</p></header><section class="prologue" id="prologue" aria-label="About this guide">
 <p>A customer says their overnight export has disappeared. The dashboard is green. The scheduler says the job succeeded. A colleague suggests clearing the browser cache. Another suggests retrying the job. Neither suggestion yet explains what happened, and a retry could create a second delivery.</p>
 <p>This is where support engineering begins: with an incomplete account of a problem that matters to somebody, and a system whose apparent health does not settle the question.</p>
 <p>The job requires technical investigation, but it also requires decisions about evidence, authority, urgency, and communication. You may identify the failing component before you know a safe workaround. You may restore the customer’s workflow before engineering understands the underlying defect. You may have a technically correct answer that arrives too late to be useful. Good support engineers learn to manage these differences explicitly.</p>
 <p>This guide is written primarily for engineers supporting software, APIs, data products, and enterprise infrastructure. The organizational chapters also apply to broader customer support teams. It covers the individual craft and the machinery around it: routing, escalation, incidents, knowledge, staffing, product feedback, and automation. It does not assume that a support engineer has production access, writes product code, or owns incident command; those responsibilities vary by company.</p>
-<p>The company accounts come from public operating handbooks, engineering blogs, practitioner essays, and Consortium for Service Innovation case studies. The technical sections also draw on primary documentation from Google, Chrome, Mozilla, and Stripe. Historical examples are dated. A company’s account describes its experience at publication, rather than a guarantee about its present organization.</p>
+<p>The company accounts come from public operating handbooks, engineering blogs, practitioner essays, and Consortium for Service Innovation case studies. The technical sections also draw on primary documentation from Google, Chrome, Mozilla, Stripe, and Cloudflare. Historical examples are dated. A company’s account describes its experience at publication, rather than a guarantee about its present organization.</p>
 <p><strong>How to read the evidence.</strong> Published company results, research estimates, and illustrative calculations are labeled separately. All training cases, customers, logs, SQL schemas, sample messages, and numerical exercises are fictional. They are constructed to teach reasoning, not presented as leaked company material. The reproduced screenshots and figures are actual source images, with attribution beside them. Original charts identify their inputs and assumptions. The images, styling, and calculators are embedded in this HTML; reading and exercises work without a connection. External source links naturally require internet access.</p>
 <p><strong>Three ways through the book.</strong> For daily casework, read chapters 1–8 and use the templates in chapter 18. For team design, read chapters 9–15. For a deliberate learning program, work through the three case labs and the development plan in chapter 16. Chapter 17 is a compact evidence ledger and an annotated reading shelf, so you can inspect the sources behind the argument.</p>
 <p>The central claim is simple: a support team becomes more capable when it can turn a customer’s experience into reliable evidence, use that evidence to restore progress, and preserve what it learns. The rest of this guide makes that claim operational.</p>
@@ -23,9 +23,9 @@
 <div class="table-scroll" tabindex="0"><table>
 <thead>
 <tr>
-<th>Record</th>
-<th>Question it answers</th>
-<th>What completion means</th>
+<th scope="col">Record</th>
+<th scope="col">Question it answers</th>
+<th scope="col">What completion means</th>
 </tr>
 </thead>
 <tbody><tr>
@@ -65,9 +65,9 @@
 <div class="table-scroll" tabindex="0"><table>
 <thead>
 <tr>
-<th>Kind of work</th>
-<th>Example</th>
-<th>Main requirement</th>
+<th scope="col">Kind of work</th>
+<th scope="col">Example</th>
+<th scope="col">Main requirement</th>
 </tr>
 </thead>
 <tbody><tr>
@@ -113,9 +113,9 @@
 <div class="table-scroll" tabindex="0"><table>
 <thead>
 <tr>
-<th>Question</th>
-<th>Why it matters</th>
-<th>A more useful form</th>
+<th scope="col">Question</th>
+<th scope="col">Why it matters</th>
+<th scope="col">A more useful form</th>
 </tr>
 </thead>
 <tbody><tr>
@@ -160,8 +160,8 @@
 <div class="table-scroll" tabindex="0"><table>
 <thead>
 <tr>
-<th>Kind of entry</th>
-<th>Example from the fictional export case</th>
+<th scope="col">Kind of entry</th>
+<th scope="col">Example from the fictional export case</th>
 </tr>
 </thead>
 <tbody><tr>
@@ -197,8 +197,8 @@
 <div class="table-scroll" tabindex="0"><table>
 <thead>
 <tr>
-<th>Situation</th>
-<th>Initial action</th>
+<th scope="col">Situation</th>
+<th scope="col">Initial action</th>
 </tr>
 </thead>
 <tbody><tr>
@@ -218,7 +218,9 @@
 <td>Route by relevant skill and normal service commitments.</td>
 </tr>
 </tbody></table></div>
+<p>Two arrivals deserve a named route rather than improvisation. A customer report of a security vulnerability is a security intake, not an ordinary case: thank the reporter, avoid confirming or denying specifics in the thread, move the details through the designated security channel, and leave timelines and any reward questions to that process. The same discipline applies to legal or regulatory requests such as data deletion or access: acknowledge, verify identity through the approved method, and hand the request to the process owner instead of fulfilling it ad hoc. HackerOne’s <a href="https://www.hackerone.com/blog/you-received-vulnerability-report-now-what-6-steps-resolution">account of what happens after a report arrives</a> shows the machinery on the receiving side, including root-cause work beyond the immediate patch. For data-rights requests, the process should follow the authoritative reference rather than a support engineer’s judgment call; the <a href="https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/individual-rights/">ICO’s individual-rights guidance</a> is one such reference.</p>
 <p>Revisit the classification when evidence changes. “Only one ticket” is a count of reports, not a measurement of affected customers. Conversely, ten tickets can come from ten people at the same account describing one operation.</p>
+<p>Escalations that arrive through relationships follow the same logic. When an account manager or an executive forwards a customer’s complaint, the message carries organizational weight but no additional evidence. Classify it by the same impact and severity criteria, give it a communication cadence that reflects the attention, and name one owner for internal updates so the investigator is not simultaneously debugging and reassuring the hierarchy. The customer’s actual deadline still matters more than the title of the person relaying it. GitLab’s public <a href="https://handbook.gitlab.com/handbook/customer-success/csm/escalations/">customer-escalation process</a> shows what this looks like when made explicit: a named directly responsible individual, a dedicated internal channel, and a defined sequence from opening to closure.</p>
 <h3>Stop information gathering when it no longer changes the decision</h3>
 <p>The goal is sufficient evidence for the next safe action, not a perfectly filled form. If you already have an identifiable widespread failure, delaying incident escalation to obtain a browser version is poor judgment. If a change is destructive or difficult to reverse, a more complete account of scope and authorization is necessary before acting.</p>
 <details class="exercise"><summary>Exercise: rewrite an unhelpful first reply</summary>
@@ -243,10 +245,10 @@
 <div class="table-scroll" tabindex="0"><table>
 <thead>
 <tr>
-<th>Hypothesis</th>
-<th>Predicted evidence</th>
-<th>Useful check</th>
-<th>What would weaken it?</th>
+<th scope="col">Hypothesis</th>
+<th scope="col">Predicted evidence</th>
+<th scope="col">Useful check</th>
+<th scope="col">What would weaken it?</th>
 </tr>
 </thead>
 <tbody><tr>
@@ -316,9 +318,9 @@
 <div class="table-scroll" tabindex="0"><table>
 <thead>
 <tr>
-<th>Observation</th>
-<th>Investigation question</th>
-<th>Dangerous shortcut</th>
+<th scope="col">Observation</th>
+<th scope="col">Investigation question</th>
+<th scope="col">Dangerous shortcut</th>
 </tr>
 </thead>
 <tbody><tr>
@@ -353,6 +355,9 @@
 </tr>
 </tbody></table></div>
 <p>This table is a diagnostic framework, not an exhaustive status-code reference. The product’s precise contract governs retries and state changes.</p>
+<h3>Read the exact error before the general theory</h3>
+<p>An error message is evidence with a lineage. Search for the literal text, in the product’s source or documentation if you have access, and in your own knowledge base, before forming a theory. A message that appears in one component’s code narrows the path more reliably than a symptom description. With a stack trace, read the frames as a route: which layer caught the failure, which layer raised it, and whether the customer-facing message was written at the boundary or deep in the stack. Check that the version that produced the error matches the code you are reading; a message edited last release will not be found in last year’s branch. Rollbar’s <a href="https://rollbar.com/blog/java-stack-trace/">guide to reading a stack trace</a> describes the same two passes: top to bottom for what went wrong, bottom to top for how the code arrived there.</p>
+<p>Some browser-only failures never reach your application at all. Corporate networks insert proxies, TLS inspection, and DNS filtering between the customer and your service. “It works on my home connection but not at the office” is a strong signal for this class: compare the certificate chain the browser receives, the proxy’s response headers, and name resolution across the two networks. Advising the customer to involve their own network team is a legitimate diagnostic step when your evidence shows the request never arrived, and a poor substitute for collecting that evidence first. Cloudflare’s <a href="https://www.cloudflare.com/learning/security/what-is-https-inspection">explanation of HTTPS inspection</a> describes the mechanism behind the certificate check: an inspection device terminates the encrypted connection and presents its own certificate, which is exactly what the browser’s certificate chain reveals.</p>
 <h3>Make a minimal reproduction explain something</h3>
 <p>A reproduction should state the expected result, actual result, exact steps, relevant version and configuration, and why each step is necessary. Strip out unrelated data while preserving the condition that triggers the failure. If the problem disappears when you simplify, compare what you removed: that is useful evidence.</p>
 <p>For example, a fictional read-only check could be:</p>
@@ -443,29 +448,29 @@ LIMIT 200;
 <div class="table-scroll" tabindex="0"><table>
 <thead>
 <tr>
-<th>Cohort in a five-minute window</th>
-<th align="right">Requests</th>
-<th align="right">Duration of each request in this simplified example</th>
-<th align="right">Total request time</th>
+<th scope="col">Cohort in a five-minute window</th>
+<th scope="col" class="num">Requests</th>
+<th scope="col" class="num">Duration of each request in this simplified example</th>
+<th scope="col" class="num">Total request time</th>
 </tr>
 </thead>
 <tbody><tr>
 <td>Unaffected</td>
-<td align="right">9,990</td>
-<td align="right">0.1 seconds</td>
-<td align="right">999 seconds</td>
+<td class="num">9,990</td>
+<td class="num">0.1 seconds</td>
+<td class="num">999 seconds</td>
 </tr>
 <tr>
 <td>Affected</td>
-<td align="right">10</td>
-<td align="right">10 seconds</td>
-<td align="right">100 seconds</td>
+<td class="num">10</td>
+<td class="num">10 seconds</td>
+<td class="num">100 seconds</td>
 </tr>
 <tr>
 <td>All</td>
-<td align="right">10,000</td>
-<td align="right">Mean = 0.1099 seconds</td>
-<td align="right">1,099 seconds</td>
+<td class="num">10,000</td>
+<td class="num">Mean = 0.1099 seconds</td>
+<td class="num">1,099 seconds</td>
 </tr>
 </tbody></table></div>
 <p>The aggregate mean is 109.9 milliseconds. With the nearest-rank convention, the aggregate 99th percentile is still 100 milliseconds, because only 0.1% of requests are slow. The affected customer nevertheless experiences a ten-second operation every time in this example.</p>
@@ -488,9 +493,9 @@ LIMIT 200;
 <div class="table-scroll" tabindex="0"><table>
 <thead>
 <tr>
-<th>Weak wording</th>
-<th>Why it fails</th>
-<th>A more useful alternative</th>
+<th scope="col">Weak wording</th>
+<th scope="col">Why it fails</th>
+<th scope="col">A more useful alternative</th>
 </tr>
 </thead>
 <tbody><tr>
@@ -531,6 +536,16 @@ LIMIT 200;
 <h3>Handle frustration with a concrete plan</h3>
 <p>If a customer has already repeated steps, acknowledge the repetition specifically. Summarize what you have read so they can correct misunderstandings. Do not ask them to repeat a test unless the new test changes a variable, captures missing evidence, or verifies a changed condition. Explain that reason.</p>
 <p>When a customer demands an action you cannot authorize, name the decision that needs an owner. “I can investigate the failed delivery, but a credit decision belongs to our account team. I’ve attached the documented impact to that request” is clearer than repeatedly implying that a technical fix will settle a commercial disagreement. Keep the technical case moving while the business decision follows its own path.</p>
+<h3>Set limits without abandoning the case</h3>
+<p>Distinguish frustration from hostility. A frustrated customer is describing the situation; a hostile one is attacking a person. Frustration deserves the concrete plan above. Hostility deserves a calm, specific boundary: name what you will do, name the behavior that has to stop, and state what happens if it continues. “I want to keep working on the failed delivery with you. I cannot continue if the thread includes personal insults. The next technical step is…” Most customers adjust. The ones who do not are a management decision, not a test of your endurance.</p>
+<p>Know your company’s disengagement policy before you need it: who may end an interaction, what must be documented, and where the case goes next. Setting a limit is not closing the case. The investigation continues with the same rigor, and the record should describe the customer’s behavior factually, without editorializing, so a colleague can take over without inheriting your anger. Help Scout’s <a href="https://www.helpscout.com/helpu/abusive-customers/">account of cutting abusive customers loose</a> is the firsthand version of that discussion: a long-tolerated customer, a plainly drawn line, and a team that worked better after the relationship ended.</p>
+<p>Apply the same discipline to yourself. If a message has made you angry, draft the reply and wait ten minutes before sending it. A reply written to win an argument rarely survives contact with the next person who reads the case.</p>
+<h3>Change the medium when a thread stalls</h3>
+<p>A long asynchronous thread is not always the fastest way to reduce uncertainty. When a technical customer and an engineer are trading partial observations, a short scheduled call with a shared screen can compress a day of replies into twenty minutes: agree on the question beforehand, watch the failure together, and separate what was seen from what it might mean.</p>
+<p>A call is not a substitute for the record. Write the outcome back into the case: what was observed, what was tried, and what happens next. The colleague who picks up the case, and the customer who looks for a promise later, should not depend on the memory of whoever attended the meeting.</p>
+<h3>Correct your own instructions plainly</h3>
+<p>Sometimes new evidence shows that your own earlier guidance was wrong: a step that does not apply to the customer’s version, a workaround with a side effect you had not seen, a reassurance that newer data has weakened. Say so directly and early. Name the instruction that changes, state what the new evidence established, and give the replacement step. “An earlier step in this case was incorrect for your deployment: the redelivery does not overwrite the destination object, so please cancel the scheduled import before we replay it.”</p>
+<p>An unacknowledged reversal costs more trust than a plainly owned one, because the customer may still be acting on the stale instruction. Correcting the record also protects the next person: a colleague who reads only the newest message should not inherit a recommendation the evidence has already ruled out. Help Scout’s <a href="https://www.helpscout.com/helpu/how-to-apologize">guide to apologizing to customers</a> covers the harder adjacent case: apologizing for the experience while holding firm to a decision that cannot change.</p>
 <h3>Write for the next person as well as the customer</h3>
 <p>Public messages and private notes serve different purposes. A private note can include hypothesis history, internal identifiers, and the explicit question for engineering. The public message should contain what the customer needs to understand and act. Avoid making an internal thread the only place where the latest state exists.</p>
 <p>At handoff, a colleague should be able to answer: what is the customer trying to do; what is currently blocked; what have we established; what should happen next; and what have we promised? If they must reread 40 messages to find those answers, the record needs a concise update.</p>
@@ -599,11 +614,11 @@ Links: Case, restricted evidence, reproduction, issue, follow-up task.
 <div class="table-scroll" tabindex="0"><table>
 <thead>
 <tr>
-<th>Account</th>
-<th>Observed symptom</th>
-<th>Impact and deadline</th>
-<th>Workaround status</th>
-<th>Last update / next commitment</th>
+<th scope="col">Account</th>
+<th scope="col">Observed symptom</th>
+<th scope="col">Impact and deadline</th>
+<th scope="col">Workaround status</th>
+<th scope="col">Last update / next commitment</th>
 </tr>
 </thead>
 <tbody><tr>
@@ -636,6 +651,7 @@ Links: Case, restricted evidence, reproduction, issue, follow-up task.
 <h3>Review the response as well as the defect</h3>
 <p>Afterward, ask how the organization detected and understood the problem. Did customer reports reveal a blind spot? Did the status page describe the customer’s actual experience? Did a workaround require permissions support lacked? Did the team declare recovery while a backlog of failed jobs remained?</p>
 <p>Action items should change a system or practice and have an owner and completion condition. “Be more careful” does not explain what will differ next time. “Add destination-delivery state to the export status and alert on generated-but-undelivered runs” is a reviewable improvement in the fictional service.</p>
+<p>The internal review is not the only record owed. Customers whose work was interrupted often need a written account of their own: what happened in terms of their workflow, which of their operations were affected, what the company has changed, and what they still need to do, if anything. Keep it separate from the internal analysis. State the scope honestly, including what is not yet known, and avoid a speculative cause that a later review may retract. Any commitment made in such an account, whether a follow-up, a credit, or a corrective action, needs the same tracked owner as a promise made in an individual case. Atlassian’s <a href="https://www.atlassian.com/incident-management/incident-communication">incident-communication guidance</a> reduces the structure to a durable outline: acknowledge and apologize, explain what went wrong, describe the fix and its prevention. Its running example is Facebook’s 2010 engineering-blog postmortem, still a reasonable model for tone.</p>
 </section><section class="chapter" id="chapter-9" aria-labelledby="chapter-9-title"><header class="chapter-header"><p class="chapter-number">CHAPTER 09</p><h2 id="chapter-9-title">How teams route and share the work</h2></header>
 <p>Traditional tiering offers an understandable division of labor. A first tier handles common questions and gathers initial evidence. A second tier handles deeper investigations. A third tier, sometimes product engineering, handles defects or highly specialized problems. The precise responsibilities vary by company; the names alone tell us little.</p>
 <p>The design can make economic sense when a large proportion of requests have known answers and scarce experts would otherwise spend their time repeating them. It can also make training more manageable. The difficulty appears when each boundary creates a new queue, a new acceptance decision, and a new investigation of facts already established.</p>
@@ -659,10 +675,10 @@ Links: Case, restricted evidence, reproduction, issue, follow-up task.
 <div class="table-scroll" tabindex="0"><table>
 <thead>
 <tr>
-<th>Model</th>
-<th>When it may fit</th>
-<th>What has to be designed</th>
-<th>Failure to watch for</th>
+<th scope="col">Model</th>
+<th scope="col">When it may fit</th>
+<th scope="col">What has to be designed</th>
+<th scope="col">Failure to watch for</th>
 </tr>
 </thead>
 <tbody><tr>
@@ -719,8 +735,8 @@ Links: Case, restricted evidence, reproduction, issue, follow-up task.
 <div class="table-scroll" tabindex="0"><table>
 <thead>
 <tr>
-<th>Part of the explanation</th>
-<th>What it establishes</th>
+<th scope="col">Part of the explanation</th>
+<th scope="col">What it establishes</th>
 </tr>
 </thead>
 <tbody><tr>
@@ -815,9 +831,9 @@ Links: Case, restricted evidence, reproduction, issue, follow-up task.
 <div class="table-scroll" tabindex="0"><table>
 <thead>
 <tr>
-<th>View</th>
-<th>Useful observations</th>
-<th>What it cannot establish alone</th>
+<th scope="col">View</th>
+<th scope="col">Useful observations</th>
+<th scope="col">What it cannot establish alone</th>
 </tr>
 </thead>
 <tbody><tr>
@@ -863,9 +879,9 @@ Links: Case, restricted evidence, reproduction, issue, follow-up task.
 <div class="table-scroll" tabindex="0"><table>
 <thead>
 <tr>
-<th>Metric</th>
-<th>A possible operational definition</th>
-<th>Pair it with</th>
+<th scope="col">Metric</th>
+<th scope="col">A possible operational definition</th>
+<th scope="col">Pair it with</th>
 </tr>
 </thead>
 <tbody><tr>
@@ -928,8 +944,8 @@ Links: Case, restricted evidence, reproduction, issue, follow-up task.
 <div class="table-scroll" tabindex="0"><table>
 <thead>
 <tr>
-<th>Readiness area</th>
-<th>Reviewable evidence</th>
+<th scope="col">Readiness area</th>
+<th scope="col">Reviewable evidence</th>
 </tr>
 </thead>
 <tbody><tr>
@@ -997,29 +1013,29 @@ Links: Case, restricted evidence, reproduction, issue, follow-up task.
 <div class="table-scroll" tabindex="0"><table>
 <thead>
 <tr>
-<th>Work class</th>
-<th align="right">Cases</th>
-<th align="right">Minutes per case</th>
-<th align="right">Total handling hours</th>
+<th scope="col">Work class</th>
+<th scope="col" class="num">Cases</th>
+<th scope="col" class="num">Minutes per case</th>
+<th scope="col" class="num">Total handling hours</th>
 </tr>
 </thead>
 <tbody><tr>
 <td>Simple</td>
-<td align="right">8,000</td>
-<td align="right">5</td>
-<td align="right">666.7</td>
+<td class="num">8,000</td>
+<td class="num">5</td>
+<td class="num">666.7</td>
 </tr>
 <tr>
 <td>Complex</td>
-<td align="right">2,000</td>
-<td align="right">40</td>
-<td align="right">1,333.3</td>
+<td class="num">2,000</td>
+<td class="num">40</td>
+<td class="num">1,333.3</td>
 </tr>
 <tr>
 <td>Total</td>
-<td align="right">10,000</td>
-<td align="right">12 on average</td>
-<td align="right">2,000</td>
+<td class="num">10,000</td>
+<td class="num">12 on average</td>
+<td class="num">2,000</td>
 </tr>
 </tbody></table></div>
 <p>Suppose automation handles every simple case perfectly and leaves the complex cases unchanged. It removes 80% of cases but only one-third of the original handling time. The average human case rises from twelve minutes to forty minutes. A manager who expects human agents to maintain their previous cases-per-day rate will mistake a changed workload for declining performance.</p>
@@ -1037,8 +1053,8 @@ Links: Case, restricted evidence, reproduction, issue, follow-up task.
 <div class="table-scroll" tabindex="0"><table>
 <thead>
 <tr>
-<th>Dimension</th>
-<th>What a reviewer checks</th>
+<th scope="col">Dimension</th>
+<th scope="col">What a reviewer checks</th>
 </tr>
 </thead>
 <tbody><tr>
@@ -1102,10 +1118,10 @@ Links: Case, restricted evidence, reproduction, issue, follow-up task.
 <div class="table-scroll" tabindex="0"><table>
 <thead>
 <tr>
-<th>Period</th>
-<th>Focus</th>
-<th>Work to produce</th>
-<th>Review question</th>
+<th scope="col">Period</th>
+<th scope="col">Focus</th>
+<th scope="col">Work to produce</th>
+<th scope="col">Review question</th>
 </tr>
 </thead>
 <tbody><tr>
@@ -1159,10 +1175,10 @@ Links: Case, restricted evidence, reproduction, issue, follow-up task.
 <div class="table-scroll" tabindex="0"><table>
 <thead>
 <tr>
-<th>Source and date</th>
-<th>Published result</th>
-<th>What was studied or compared</th>
-<th>How to interpret it</th>
+<th scope="col">Source and date</th>
+<th scope="col">Published result</th>
+<th scope="col">What was studied or compared</th>
+<th scope="col">How to interpret it</th>
 </tr>
 </thead>
 <tbody><tr>
@@ -1217,9 +1233,11 @@ Links: Case, restricted evidence, reproduction, issue, follow-up task.
 <li><a href="https://linear.app/now/cx-in-linear">Linear — How we run CX in Linear</a>. The most visually concrete source here for the connection between a customer conversation and product work. Includes the interface reproduced in chapter 7.</li>
 <li><a href="https://sre.google/sre-book/effective-troubleshooting/">Google SRE — Effective Troubleshooting</a>. A foundational chapter for disciplined diagnosis. Use it with the labs, rather than treating it as a checklist of commands.</li>
 <li><a href="https://slack.engineering/all-hands-on-deck/">Slack — All Hands on Deck</a>. Read for the human organization of incident response and the place of customer experience within it.</li>
+<li><a href="https://www.atlassian.com/incident-management/incident-communication">Atlassian — Incident communication best practices</a>. The customer-facing counterpart to the Slack account: the structure of the message an affected user receives.</li>
+<li><a href="https://www.helpscout.com/helpu/abusive-customers/">Help Scout — How to break up with abusive customers</a>. A concrete story and policy discussion behind the boundary-setting advice in chapter 6.</li>
 </ol>
 <p><strong>Then read the organizational experiments.</strong> The useful material is often the difficulty encountered during implementation, not the headline improvement.</p>
-<ol start="6">
+<ol start="8">
 <li><a href="https://library.serviceinnovation.org/Case_Studies/Intelligent_Swarming_Case_Studies/04_2024_Intelligent_Swarming_Ping_Identity">Ping Identity — Intelligent Swarming</a>. A particularly candid case about changing the shape of a job.</li>
 <li><a href="https://library.serviceinnovation.org/Case_Studies/Intelligent_Swarming_Case_Studies/05_2022_Akamai">Akamai — Intelligent Swarming</a>. Read for collaboration visibility and implementation choices.</li>
 <li><a href="https://library.serviceinnovation.org/Case_Studies/Intelligent_Swarming_Case_Studies/11_2013_Intelligent_Matching_at_Cisco">Cisco — Intelligent Matching</a>. A historical example with unusually specific routing mechanics.</li>
@@ -1227,7 +1245,7 @@ Links: Case, restricted evidence, reproduction, issue, follow-up task.
 <li><a href="https://buffer.com/resources/customer-advocacy-4-day-workweek/">Buffer — A four-day workweek in customer advocacy</a>. A useful service-design account because it reports multiple metrics.</li>
 </ol>
 <p><strong>Read knowledge management as part of engineering work.</strong> These sources explain why documentation quality, publication, and reuse require an operating system of their own.</p>
-<ol start="11">
+<ol start="13">
 <li><a href="https://library.serviceinnovation.org/KCS/KCS_v6/KCS_v6_Practices_Guide/030/025">KCS — The Double Loop Process</a>. The compact conceptual foundation for chapter 10.</li>
 <li><a href="https://library.serviceinnovation.org/Case_Studies/KCS_Case_Studies/400_ServiceNow_KCS_Faster_Time_to_Relief">ServiceNow — Faster Time to Relief</a>. Read for the adoption and coaching mechanism, then scrutinize how outcomes were measured.</li>
 <li><a href="https://library.serviceinnovation.org/Case_Studies/KCS_Case_Studies/550_HP_Enterprise_Improving_Customer_Success_with_Self-Service">HPE — Customer Success with Self-Service</a>. A historical account of making knowledge available sooner.</li>
@@ -1235,7 +1253,7 @@ Links: Case, restricted evidence, reproduction, issue, follow-up task.
 <li><a href="https://library.serviceinnovation.org/KCS/KCS_v6/KCS_v6_Practices_Guide/030/040/010/085">KCS — Self-Service Measures</a>. Read before equating self-service activity with avoided assisted contacts.</li>
 </ol>
 <p><strong>Study the support system around a release or an automation.</strong> These sources are especially useful for seeing how support work extends beyond an inbox.</p>
-<ol start="16">
+<ol start="18">
 <li><a href="https://buffer.com/resources/support-team-product-launches/">Buffer — Preparing support for product launches</a>. Read while designing release readiness.</li>
 <li><a href="https://www.intercom.com/blog/customer-support-product-launch/">Intercom — Customer support and a product launch</a>. A temporary specialist arrangement around new product demand.</li>
 <li><a href="https://www.uber.com/us/en/blog/customer-obsession-engineering/">Uber — Customer Obsession Engineering</a>. A historical architecture account connecting context, tools, and product-team ownership.</li>
@@ -1247,13 +1265,14 @@ Links: Case, restricted evidence, reproduction, issue, follow-up task.
 <li><a href="https://handbook.gitlab.com/handbook/support/">GitLab — Support handbook</a>. A broader reference for role boundaries and organizational responsibilities.</li>
 </ol>
 <p><strong>Keep the technical references nearby.</strong> These are reference documents, rather than accounts of how a company organizes its team.</p>
-<ol start="25">
+<ol start="27">
 <li><a href="https://developer.chrome.com/docs/devtools/network/reference">Chrome — Network features reference</a>. Consult the timing, request inspection, and HAR sections while gathering browser evidence.</li>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS">Mozilla — CORS</a>. The browser-specific behavior behind many misleading “works in curl” reports.</li>
 <li><a href="https://docs.stripe.com/webhooks">Stripe — Webhooks</a>. Delivery semantics and debugging guidance for an important class of asynchronous integration.</li>
 <li><a href="https://docs.stripe.com/api/idempotent_requests">Stripe — Idempotent requests</a>. A concrete API contract to compare with the service you support.</li>
 <li><a href="https://docs.stripe.com/webhooks/process-undelivered-events">Stripe — Process undelivered webhook events</a>. A recovery workflow worth studying alongside duplicate handling.</li>
 <li><a href="https://library.serviceinnovation.org/Intelligent_Swarming/Practices_Guide/35_Is_It_Right_for_You">Consortium — Is Intelligent Swarming Right for You?</a>. A fit discussion to read before choosing an operating model.</li>
+<li><a href="https://www.cloudflare.com/learning/security/what-is-https-inspection">Cloudflare — What is HTTPS inspection?</a>. The corporate-intermediary mechanism behind many “works at home, fails at the office” reports.</li>
 </ol>
 <h3>Source and image notes</h3>
 <p>Research and source checks were completed on 12 September 2026. Long manuals and reference sites were read at the cited chapter or relevant-section level. The guide synthesizes those sources and adds original training material; it is not an authorized manual from any of the companies mentioned. No private support records or unpublished company datasets were used.</p>
@@ -1358,7 +1377,7 @@ Reviewer and disagreement notes:
 <p>A small team can use five prompts: Which customer commitments are at risk? Which cases need help or a decision? Which repeated failure consumed the most effort? What did we learn that another engineer can reuse? Which improvement from a previous review has changed outcomes?</p>
 <p>Write down the resulting owner and next action. If the meeting only recites dashboard values, distribute the dashboard and use the meeting for the choices it cannot make.</p>
 <p>The work of support engineering is complete at several different moments: when an individual operation is recovered, when the customer confirms progress, when a defect is corrected, and when the organization becomes less likely to repeat the same investigation. Strong teams make each of those moments visible and give someone the means to reach it.</p>
-</section><footer class="book-footer"><p>The Support Engineer’s Field Guide · September 2026</p><a href="#prologue">Back to the beginning ↑</a></footer></main></div><dialog id="image-dialog" aria-label="Enlarged source figure"><form method="dialog"><button aria-label="Close enlarged figure">Close ×</button></form><img alt=""><p></p></dialog><script>(()=>{
+</section><footer class="book-footer"><p>The Support Engineer’s Field Guide · September 2026 · <a href="https://github.com/igniting/support-guidebook">Source and feedback on GitHub</a></p><a href="#prologue">Back to the beginning ↑</a></footer></main></div><dialog id="image-dialog" aria-label="Enlarged source figure"><form method="dialog"><button aria-label="Close enlarged figure">Close ×</button></form><img alt=""><p></p></dialog><script>(()=>{
  'use strict';
  const $=id=>document.getElementById(id);
  const fmt=n=>n.toLocaleString('en-US',{minimumFractionDigits:1,maximumFractionDigits:1});
@@ -1386,7 +1405,7 @@ Reviewer and disagreement notes:
   if(copied){b.textContent='Copied';setTimeout(()=>b.textContent='Copy',1800);}else{const range=document.createRange();range.selectNodeContents(b.parentElement.querySelector('code'));const selection=window.getSelection();selection.removeAllRanges();selection.addRange(range);b.textContent='Text selected';}
  }));
  const dialog=$('image-dialog');
- document.querySelectorAll('.zoom-image').forEach(b=>b.addEventListener('click',()=>{const src=b.querySelector('img');const img=dialog.querySelector('img');img.src=src.src;img.alt=src.alt;dialog.querySelector('p').textContent=b.closest('figure').querySelector('figcaption').textContent;dialog.showModal();}));
+ document.querySelectorAll('.zoom-image').forEach(b=>b.addEventListener('click',()=>{const src=b.querySelector('img');const img=dialog.querySelector('img');img.src=src.src;img.alt=src.alt;dialog.querySelector('p').textContent=b.closest('figure').querySelector('figcaption').innerText.replace(/\n+/g,' \u2014 ');dialog.showModal();}));
  dialog.addEventListener('click',e=>{if(e.target===dialog)dialog.close();});
  const chapters=[...document.querySelectorAll('.chapter')],links=[...document.querySelectorAll('.toc-group a')];
  let queued=false;
@@ -1395,6 +1414,7 @@ Reviewer and disagreement notes:
   let current='';for(const c of chapters){if(c.getBoundingClientRect().top<=160)current=c.id;else break;}
   for(const a of links){const active=a.getAttribute('href')==='#'+current;a.classList.toggle('active',active);if(active)a.setAttribute('aria-current','location');else a.removeAttribute('aria-current');}
  }
+ window.addEventListener('beforeprint',()=>document.querySelectorAll('details').forEach(d=>{d.open=true;}));
  window.addEventListener('scroll',()=>{if(!queued){queued=true;requestAnimationFrame(position);}},{passive:true});position();
  document.querySelectorAll('.mobile-contents a').forEach(a=>a.addEventListener('click',()=>document.querySelector('.mobile-contents').removeAttribute('open')));
 })();
